@@ -19,7 +19,7 @@ class ChatPage extends StatelessWidget {
           "Chat",
           style: TextStyle(fontSize: 30, color: Colors.black),
         ),
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.white,
         elevation: 0,
         actions: [
           Padding(
@@ -33,25 +33,32 @@ class ChatPage extends StatelessWidget {
                 )),
           )
         ],
-      ),
-      backgroundColor: const Color(0xffE8E7E8),
-      body: Container(
-        child: SizedBox(
-          child: ListView.builder(
-            shrinkWrap: true,
-            itemCount: 10,
-            itemBuilder: (context, index) {
-              return GestureDetector(
-                onTap: () {
-                  // print(newData[index]);
-                },
-                child: Padding(
-                  padding: const EdgeInsets.only(right: 8.0),
-                  child: ChatOption(),
-                ),
-              );
-            },
+        bottom: PreferredSize(
+          preferredSize: const Size(10, 10),
+          child: Divider(
+            thickness: 1,
+            color: Colors.grey.withOpacity(0.4),
+            indent: 20,
+            endIndent: 20,
           ),
+        ),
+      ),
+      backgroundColor: Colors.white,
+      body: SizedBox(
+        child: ListView.builder(
+          shrinkWrap: true,
+          itemCount: 10,
+          itemBuilder: (context, index) {
+            return GestureDetector(
+              onTap: () {},
+              child: const ChatOption(
+                  title: "Vindhya Farmer Group",
+                  subtitle: "Did you get my order",
+                  time: "12:30",
+                  isMessage: true,
+                  noM: "5"),
+            );
+          },
         ),
       ),
     );

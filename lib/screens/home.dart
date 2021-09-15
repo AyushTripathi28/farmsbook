@@ -42,8 +42,11 @@ class _HomePageState extends State<HomePage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
-                "FarmsBook",
-                style: TextStyle(fontSize: 20, color: Colors.black),
+                "Trending",
+                style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold),
               ),
               SizedBox(
                 height: 100,
